@@ -1,0 +1,163 @@
+/* Online Auction System - shared styles */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #222;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+a { color: #2a6db5; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h2 { font-size: 1.4em; margin: 16px 0 10px; }
+h3 { font-size: 1.15em; margin: 12px 0 8px; }
+h4 { font-size: 1em; margin: 10px 0 6px; }
+p  { margin: 6px 0; }
+
+/* navbar */
+.nav {
+    background: #2a6db5;
+    padding: 10px 20px;
+    margin: -20px -20px 20px -20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.nav a {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+.nav a:hover {
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+/* forms */
+.container {
+    max-width: 480px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 24px 28px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+input[type=text], input[type=email], input[type=password],
+input[type=number], input[type=datetime-local],
+select, textarea {
+    width: 100%;
+    padding: 7px 8px;
+    margin-top: 4px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 0.95em;
+    font-family: inherit;
+    background: #fafafa;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2a6db5;
+    background: #fff;
+}
+textarea { resize: vertical; }
+
+/* buttons */
+input[type=submit] {
+    margin-top: 14px;
+    padding: 7px 18px;
+    background: #2a6db5;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+input[type=submit]:hover { background: #1f549a; }
+
+a.btn {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #2a6db5;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 0.88em;
+    text-decoration: none;
+}
+a.btn:hover { background: #1f549a; text-decoration: none; }
+
+button.btn-approve { background: #2e7d32; color: #fff; border: none; border-radius: 3px; padding: 5px 10px; cursor: pointer; font-size: 0.88em; }
+button.btn-approve:hover { background: #1b5e20; }
+
+button.btn-reject, button.btn-delete { background: #c62828; color: #fff; border: none; border-radius: 3px; padding: 5px 10px; cursor: pointer; font-size: 0.88em; }
+button.btn-reject:hover, button.btn-delete:hover { background: #8e0000; }
+
+button.btn-edit { background: #1565c0; color: #fff; border: none; border-radius: 3px; padding: 5px 10px; cursor: pointer; font-size: 0.88em; }
+button.btn-edit:hover { background: #0d47a1; }
+
+button.btn-cancel { background: #c62828; color: #fff; border: none; border-radius: 3px; padding: 5px 10px; cursor: pointer; font-size: 0.88em; }
+button.btn-cancel:hover { background: #8e0000; }
+
+/* tables */
+table { border-collapse: collapse; width: 100%; margin-bottom: 14px; background: #fff; font-size: 0.93em; }
+th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; }
+th { background: #e8edf3; }
+tr:hover td { background: #f0f5fc; }
+
+/* section box */
+.section { border: 1px solid #ddd; border-radius: 4px; padding: 14px 16px; margin-bottom: 18px; background: #fff; }
+
+/* messages */
+.success { color: #2e7d32; }
+.error   { color: #c62828; }
+ul.error { padding-left: 20px; margin: 6px 0; color: #c62828; }
+
+.notice { background: #fff8e1; border: 1px solid #f9a825; color: #6d4c00; padding: 8px 12px; border-radius: 3px; margin-bottom: 10px; font-size: 0.9em; }
+.winner-box { background: #e8f5e9; border: 1px solid #2e7d32; padding: 10px 14px; border-radius: 3px; margin-top: 10px; }
+.reserve-not-met { background: #fff8e1; border: 1px solid #f9a825; padding: 10px 14px; border-radius: 3px; margin-top: 10px; }
+
+/* listing detail */
+.listing-details { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+.listing-img img { max-width: 300px; border: 1px solid #ccc; border-radius: 3px; }
+.listing-img .no-img { width: 300px; height: 200px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #777; border-radius: 3px; }
+.listing-info { flex: 1; min-width: 250px; }
+.listing-info table { margin-bottom: 0; }
+.listing-info td { border: none; border-bottom: 1px solid #eee; padding: 6px 8px; }
+.listing-info td:first-child { font-weight: bold; width: 150px; color: #555; }
+.listing-info tr:hover td { background: none; }
+
+/* bid section */
+.bid-section { margin-top: 16px; padding: 14px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; max-width: 420px; }
+.bid-section input[type=number] { width: 160px; display: inline-block; margin-top: 0; }
+#bid-message { margin-top: 8px; font-weight: bold; font-size: 0.92em; }
+.success-msg { color: #2e7d32; }
+.error-msg   { color: #c62828; }
+
+/* home thumbnails */
+img.thumb { width: 80px; height: 60px; object-fit: cover; border: 1px solid #ccc; border-radius: 2px; }
+.no-img { display: inline-block; width: 80px; height: 60px; background: #e0e0e0; line-height: 60px; text-align: center; font-size: 11px; color: #777; border-radius: 2px; }
+
+/* filter */
+.filter-form { margin-bottom: 14px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.filter-form select, .filter-form input[type=text] { width: auto; margin-top: 0; }
+
+/* misc */
+img.preview { max-width: 220px; margin-top: 8px; border: 1px solid #ccc; border-radius: 3px; }
+.countdown { font-weight: bold; color: #c62828; }
+.stats-table td:last-child { font-weight: bold; }
+.msg-approved { color: #2e7d32; font-weight: bold; }
+.status-leading { color: #2e7d32; font-weight: bold; }
+.status-outbid  { color: #c62828; }
+.status-won     { color: #1565c0; font-weight: bold; }
+.status-lost    { color: #777; }
